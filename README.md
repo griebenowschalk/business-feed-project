@@ -45,8 +45,8 @@ docker login
 Build image with hub username
 
 ```
-docker build -t <docker-hub-username>/react-kubernetes-app .
-docker push <docker-hub-username>/react-app:latest
+docker build -t <docker-hub-username>/wyzetalk-project .
+docker push <docker-hub-username>/wyzetalk-project:latest
 ```
 
 To serve application using Kubernetes:
@@ -66,5 +66,5 @@ kubectl apply -f deployment.yaml
 Assign Kubernetes cluster a static URL to access deployed application
 
 ```
-minikube service react-kubernetes-app
+minikube service wyzetalk-project
 ```
