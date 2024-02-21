@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: wyzetalk-project
-        image: schalkg/wyzetalk-project:latest
+        image: schalkg/wyzetalk-project:latest #Latest image on Docker Hub
         imagePullPolicy: Always
         resources:
           limits:

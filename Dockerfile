@@ -11,11 +11,15 @@ COPY package-lock.json ./
 # install dependencies
 RUN npm install
 
+# create production build
+RUN npm run build
+
 # copy everything to /app directory
 COPY ./ ./ 
 
 # run the app
 CMD ["npm", "start"]
 
+#run Docker app with Nginx
 FROM nginx:alpine
 COPY dist/ /usr/share/nginx/html
