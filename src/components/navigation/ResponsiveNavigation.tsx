@@ -15,15 +15,7 @@ type Props = {
 
 function renderDrawer(classes: ClassNameMap, isMobile: boolean) {
     return (
-        <Drawer
-            classes={{
-                paper: classes.drawerPaper,
-            }}
-            variant='permanent'
-            open
-        >
-            <NavBarContent isMobile={isMobile}/>
-        </Drawer>
+        <NavBarContent isMobile={isMobile}/>
     )
 }
 
@@ -35,9 +27,7 @@ function ResponsiveNavigation(props: Props) {
     return (
         <div className={classes.root}>
             <MainToolbar/>
-            <nav className={classes.drawer}>
-                {renderDrawer(classes, isMobile)}
-            </nav>
+            {renderDrawer(classes, isMobile)}
             <main className={classes.content}>
                 <div className={classes.toolbar} />
                 {children}

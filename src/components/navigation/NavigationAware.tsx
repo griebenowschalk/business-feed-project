@@ -14,9 +14,7 @@ interface Props {
 function NavigationAware(props: Props) {
     return (
         <div className='responsive-container'>
-            <ThemeProvider theme={theme}>
-                <ResponsiveNavigation>{props.children}</ResponsiveNavigation>
-            </ThemeProvider>
+            <ResponsiveNavigation>{props.children}</ResponsiveNavigation>
         </div>
     )
 }

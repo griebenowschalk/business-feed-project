@@ -1,5 +1,5 @@
-import styled from "@mui/system/styled"
-import { colors, NAV_DRAWER_WIDTH, NAV_DRAWER_HEIGHT } from "../theme/theme"
+import styled from '@mui/system/styled'
+import { colors, NAV_DRAWER_WIDTH, NAV_DRAWER_HEIGHT } from '../theme/theme'
 
 export const responsiveNavigationStyle = (theme: any) => ({
         root: {
@@ -8,12 +8,6 @@ export const responsiveNavigationStyle = (theme: any) => ({
             minHeigh: '100%',
             width: '100%',
             backgroundColor: colors.container_background_color,
-        },
-        drawer: {
-            [theme?.breakpoints?.up('sm')]: {
-                width: NAV_DRAWER_WIDTH,
-                flexShrink: 0,
-            },
         },
         toolbar: theme?.mixins?.toolbar,
         drawerPaper: {

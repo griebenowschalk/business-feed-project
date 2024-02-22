@@ -1,6 +1,6 @@
 export interface NavDrawerItem {
     id: number
     name: string
-    icon: (selected: boolean) => JSX.Element
+    icon: (className: string) => JSX.Element
     route: string
 }

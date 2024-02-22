@@ -3,12 +3,12 @@ import { NavDrawerItem } from '../../types/navBar.types'
 import { DRAWER_ITEMS } from './NavBarContent'
 import withRouter, { Router } from '../hoc/withRouter'
 import { navigateTo } from '../../helpers/navigationHelper'
+import { AppBar, Toolbar } from '@mui/material'
 
 import React from 'react'
-import AppBar from '@mui/material/AppBar'
-import Toolbar from '@mui/material/Toolbar'
 import NavBarUser from '../user/NavBarUser'
-import NotificationsIcon from '@mui/icons-material/Notifications';
+import { NotificationsOutlined } from '@mui/icons-material';
+import logo from '../../assets/logo.png'
 
 import './Navigation.scss'
 
@@ -20,18 +20,19 @@ function MainToolbar(props: Props) {
     const { router } = props;
 
     return (
-        <div className='main-tool-bar'>
-            <AppBar
-                position='fixed'
-            >   
-                <img src='../assets/logo.png' alt='logo' className='toolbar-logo' onClick={() => navigateTo(router, DRAWER_ITEMS[0], true)} />
-                <Toolbar>
-                    <NotificationsIcon className='toolbar-content-icon' color='primary' />
-                    <NavBarUser />
-                </Toolbar>
-                <Divider />
-            </AppBar>
-        </div>
+        <AppBar
+            position='fixed'
+            className='main-tool-bar'
+            sx={{
+                zIndex: (theme) => theme.zIndex.drawer + 1,
+            }}      
+        >
+            <img src={logo} alt='logo' className='toolbar-logo' onClick={() => navigateTo(router, DRAWER_ITEMS[0], true)} />
+            <Toolbar className='toolbar-content'>
+                <NotificationsOutlined className='toolbar-content-icon' color='primary' />
+                <NavBarUser />
+            </Toolbar>
+        </AppBar>
     )
 }
 

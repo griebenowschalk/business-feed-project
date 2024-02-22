@@ -1,6 +1,6 @@
-import { Router } from "../components/hoc/withRouter"
-import { DRAWER_ITEMS } from "../components/navigation/NavBarContent"
-import { NavDrawerItem } from "../types/navBar.types"
+import { Router } from '../components/hoc/withRouter'
+import { DRAWER_ITEMS } from '../components/navigation/NavBarContent'
+import { NavDrawerItem } from '../types/navBar.types'
 
 export function navigateTo(router: Router, item: NavDrawerItem, replace: boolean = false) {
     router.navigate(item.route, { replace })
