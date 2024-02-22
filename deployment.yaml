@@ -29,11 +29,10 @@ kind: Service
 metadata:
  name: wyzetalk-project
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: wyzetalk-project
   ports:
     - port: 80
       protocol: TCP
-      targetPort: 80
-      nodePort: 31000
+      targetPort: 8080

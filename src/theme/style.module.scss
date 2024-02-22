@@ -1,0 +1,12 @@
+@import "../scss/variables.scss";
+
+:export {
+    text_dark: $text-dark;
+    primary: $color-primary;
+    secondary: $color-secondary;
+    error: $color-error;
+    warning: $color-warning;
+    nav_bar_height: $nav-bar-height;
+    nav_bar_width: $nav-bar-width;
+    container_background_color: $container-background-color;
+}
