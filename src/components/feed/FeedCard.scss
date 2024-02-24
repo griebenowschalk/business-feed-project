@@ -1,0 +1,24 @@
+@import '../../scss/variables.scss';
+
+.feed-card-container {
+    margin-bottom: $pm-half;
+    // margin-left: 3px;
+
+    .avatar {
+        height: 30px;
+        width: auto;
+    }
+
+    .title {
+        color: $text-dark;
+        font-weight: 700;
+        font-size: 15px;
+        margin-bottom: $pm-quarter;
+    }
+
+    .description {
+        color: $color-secondary;
+        font-weight: 500;
+        font-size: 15px;
+    }
+}

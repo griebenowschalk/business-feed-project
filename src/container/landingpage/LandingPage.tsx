@@ -18,9 +18,9 @@ function LandingPage(_props: Props) {
         <NavigationAware>
             <Routes>
                 <Route path={DRAWER_ITEMS[0].route} element={<Home />} />
-                <Route path={DRAWER_ITEMS[1].route} element={<div></div>} />
-                <Route path={DRAWER_ITEMS[2].route} element={<div></div>} />
-                <Route path={DRAWER_ITEMS[3].route} element={<div></div>} />
+                <Route path={DRAWER_ITEMS[1].route} element={<NotFound />} />
+                <Route path={DRAWER_ITEMS[2].route} element={<NotFound />} />
+                <Route path={DRAWER_ITEMS[3].route} element={<NotFound />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>
         </NavigationAware>

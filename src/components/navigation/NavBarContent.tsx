@@ -62,7 +62,7 @@ function NavBarContent(props: Props) {
                 className='app-drawer'
                 sx={{
                     '& .MuiDrawer-paper': {
-                        borderWidth: 0,
+                        borderWidth: 0
                     },
                 }}
             >

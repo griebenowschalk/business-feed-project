@@ -1,23 +1,15 @@
 @import '../../scss/variables.scss';
 
 .elastic-search-bar-root {
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
+    max-width: 100%;
 
     .rounded-container {
-        display: flex;
-        flex: 1;
         border-radius: 5px;
         border-style: solid;
         flex-direction: row;
         align-items: center;
         border-width: 2px;
         border-color: $color-secondary;
-        padding-left: 5px;
-        padding-right: 5px;
-        width: 100%;
-        
         background: white;
     }
 
@@ -27,8 +19,6 @@
 
     .input {
         flex: 1;
-        margin-left: 5px;
-        margin-right: 5px;
-        margin-top: 0px;
+        margin: 0px 5px;
     }
 }

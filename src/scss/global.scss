@@ -1,20 +1,13 @@
-@import './variables.scss';
-
-.full-screen-window {
-    display: flex;
-    flex-direction: column;
-    min-width: 100%;
-    min-height: 100%;
-    width: 100%;
-
-    &--no-scroll {
-        @extend .full-screen-window;
-        height: 100%;
-        overflow-y: hidden;
-        overflow-x: hidden;
-    }
-}
+@import "./variables.scss";
 
 .responsive-container-padding {
-    padding: $pm-half;
+    padding: 0px $pm-half;
+
+    @include lg {
+        padding: 0px $pm;
+    }
+
+    @include sm {
+        padding-left: $pm-quarter;
+    }
 }
