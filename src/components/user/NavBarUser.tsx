@@ -10,9 +10,15 @@ interface Props {
 }
 
 function NavBarUser(props: Props) {
+    const { router } = props;
+
+    function handleUserClick() {
+        router.navigate('/profile')
+    }
+
     return (
         <div className='toolbar-user'>
-            <AccountCircleIcon className='toolbar-user-icon' color='primary' />
+            <AccountCircleIcon onClick={handleUserClick} className='toolbar-user-icon' color='primary' />
         </div>
     )
 }

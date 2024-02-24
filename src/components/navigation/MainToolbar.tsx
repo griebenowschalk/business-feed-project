@@ -1,6 +1,6 @@
 import { Divider } from '@mui/material'
 import { NavDrawerItem } from '../../types/navBar.types'
-import { DRAWER_ITEMS } from './NavBarContent'
+import { DRAWER_ITEMS } from '../../staticcontent/DrawerItems'
 import withRouter, { Router } from '../hoc/withRouter'
 import { navigateTo } from '../../helpers/navigationHelper'
 import { AppBar, Toolbar } from '@mui/material'
@@ -29,7 +29,7 @@ function MainToolbar(props: Props) {
         >
             <img src={logo} alt='logo' className='toolbar-logo' onClick={() => navigateTo(router, DRAWER_ITEMS[0], true)} />
             <Toolbar className='toolbar-content'>
-                <NotificationsOutlined className='toolbar-content-icon' color='primary' />
+                <NotificationsOutlined className='toolbar-content-icon' />
                 <NavBarUser />
             </Toolbar>
         </AppBar>

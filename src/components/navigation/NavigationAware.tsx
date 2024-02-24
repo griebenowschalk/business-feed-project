@@ -1,20 +1,40 @@
-import { theme } from '../../theme/theme';
-import { ThemeProvider } from '@mui/material/styles';
-import React from 'react';
-import ResponsiveNavigation from './ResponsiveNavigation';
+import React, { useState } from 'react';
+import { useMediaQuery } from '@mui/material'
+import { responsiveNavigationStyle } from '../../helpers/stylingHelper';
+import { useTheme } from '@emotion/react';
+
+import MainToolbar from './MainToolbar'
+import NavBarContent from './NavBarContent'
+import useCustomStyles from '../../hooks/useCustomStyles';
+
 import './Navigation.scss'
 
 interface Props {
-    children: any
+    children: React.ReactNode
 }
 
-/**
- * NOTE: Add a single child component only
- */
 function NavigationAware(props: Props) {
+    const { children } = props;
+    const isMobile = useMediaQuery('(max-width:599px)') //600px is sm
+    const classes = useCustomStyles(responsiveNavigationStyle, useTheme());
+
+    function renderDrawer(isMobile: boolean) {
+        return (
+            <NavBarContent isMobile={isMobile} />
+        )
+    }
+
     return (
         <div className='responsive-container'>
-            <ResponsiveNavigation>{props.children}</ResponsiveNavigation>
+            <MainToolbar />
+            <main className={classes.toolbarAwareContainer}>
+                <nav className={classes.drawer}>
+                    {renderDrawer(isMobile)}
+                </nav>
+                <div className={classes.content}>
+                    {children}
+                </div>
+            </main>
         </div>
     )
 }

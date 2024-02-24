@@ -4,7 +4,9 @@ import { theme } from '../../theme/theme';
 import { Provider } from 'react-redux';
 
 import store from '../../redux/store';
-import Home from '../home/Home';
+import LandingPage from '../landingpage/LandingPage';
+
+import '../../scss/global.scss';
 
 function App() {
   return (
@@ -12,8 +14,8 @@ function App() {
       <Provider store={store}>
         <BrowserRouter>
           <Routes>
-            <Route path='/home' element={<Home />} />
-            <Route path='*' element={<Home />} />
+            <Route path='/home' element={<LandingPage />} />
+            <Route path='*' element={<LandingPage />} />
           </Routes>
         </BrowserRouter>
       </Provider>

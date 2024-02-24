@@ -2,7 +2,7 @@ import { createTheme } from '@mui/material/styles'
 import styles from './style.module.scss'
 
 export const NAV_DRAWER_WIDTH = styles.nav_bar_width
-export const NAV_DRAWER_HEIGHT = styles.nav_bar_height
+export const TOOLBAR_HEIGHT = styles.tool_bar_height
 
 export const colors = {
     primary: styles.primary,

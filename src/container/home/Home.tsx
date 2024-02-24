@@ -1,28 +1,37 @@
-import React from 'react';
+import React, { useState, useRef, MutableRefObject } from 'react';
 import withRouter, { Router } from '../../components/hoc/withRouter';
-import { Route, Routes } from 'react-router-dom'
-import { DRAWER_ITEMS } from '../../components/navigation/NavBarContent';
+import { strings } from '../../localisation/strings';
 
-import NavigationAware from '../../components/navigation/NavigationAware';
-import NotFound from '../notfound/NotFound';
+import ElasticSearchBar from '../../components/search/ElasticSearchBar';
 
-import './Home.scss';
+import '../../scss/global.scss'
+import './Home.scss'
+import { Grid } from '@mui/material';
 
 interface Props {
     router: Router;
 }
 
 function Home(props: Props) {
+    const { router } = props;
+    const [textSearch, setTextSearch] = useState<string>('');
+    const searchBarRef = useRef(null);
+
     return (
-        <NavigationAware>
-            <Routes>
-                <Route path={DRAWER_ITEMS[0].route} element={<div></div>} />
-                <Route path={DRAWER_ITEMS[1].route} element={<div></div>} />
-                <Route path={DRAWER_ITEMS[2].route} element={<div></div>} />
-                <Route path={DRAWER_ITEMS[3].route} element={<div></div>} />
-                <Route path='*' element={<NotFound />} />
-            </Routes>
-        </NavigationAware>
+        <Grid className='home-container' container>
+            <Grid item className='bar'>
+                <ElasticSearchBar
+                    placeholder={strings.search}
+                    onChange={(searchQuery) => {
+                        setTextSearch(searchQuery)
+                    }}
+                    onRef={(ref: any) => {
+                        searchBarRef.current = ref;
+                    }}
+                    initialValue={textSearch}
+                />
+            </Grid>
+        </Grid>
     );
 };
 

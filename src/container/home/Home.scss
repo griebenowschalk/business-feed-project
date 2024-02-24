@@ -1,0 +1,15 @@
+@import "../../scss/global.scss";
+
+.home-container {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+
+    @extend .responsive-container-padding;
+
+    .bar {
+        width: 100%;
+    }
+}

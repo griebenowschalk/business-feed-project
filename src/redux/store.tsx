@@ -2,12 +2,12 @@ import { configureStore } from '@reduxjs/toolkit';
 import { thunk } from 'redux-thunk';
 
 // Import your reducers here
-import navbarReducer from './reducers/navbarReducer';
+import navbarSlice from './slice/navbarSlice';
 
 // Create the store
 const store = configureStore({
     reducer: {
-        navbar: navbarReducer,
+        navbar: navbarSlice,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: false

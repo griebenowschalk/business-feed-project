@@ -7,4 +7,5 @@ export const strings = {
     social: 'Social',
     hr: 'HR',
     safety: 'Safety',
+    search: 'Search',
 };

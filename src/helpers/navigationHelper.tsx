@@ -1,5 +1,5 @@
 import { Router } from '../components/hoc/withRouter'
-import { DRAWER_ITEMS } from '../components/navigation/NavBarContent'
+import { DRAWER_ITEMS } from '../staticcontent/DrawerItems'
 import { NavDrawerItem } from '../types/navBar.types'
 
 export function navigateTo(router: Router, item: NavDrawerItem, replace: boolean = false) {
