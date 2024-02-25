@@ -9,14 +9,14 @@ import { BottomNavigation, BottomNavigationAction, Drawer, Typography } from '@m
 import { NAV_DRAWER_WIDTH } from '../../theme/theme';
 import { DRAWER_ITEMS } from '../../staticcontent/DrawerItems'
 
-import './Navigation.scss'
+import "./Navigation.scss"
 
-interface Props {
+interface NavBarContentProps {
     router: Router,
     isMobile: boolean
 }
 
-function NavBarContent(props: Props) {
+function NavBarContent(props: NavBarContentProps) {
     const { router, isMobile } = props
     const dispatch = useDispatch()
     const { selectedDrawerItem } = useSelector((state: any) => state.navbar)
@@ -26,7 +26,7 @@ function NavBarContent(props: Props) {
     }
 
     function isSelectedStyle(item: NavDrawerItem) {
-        return `nav-drawer-item-icon${isSelected(item) ? '--selected' : ''}`
+        return `nav-drawer-item-icon${isSelected(item) ? "--selected" : ""}`
     }
 
     function renderMobileDrawer() {
@@ -38,12 +38,12 @@ function NavBarContent(props: Props) {
                     dispatch(selectedDrawerItemUpdate(DRAWER_ITEMS[newValue]))
                     navigateTo(router, DRAWER_ITEMS[newValue], true)
                 }}
-                className='mobile-nav-bar'
+                className="mobile-nav-bar"
             >
                 {DRAWER_ITEMS.map((item, index) => {
                     return (
                         <BottomNavigationAction
-                            className='nav-drawer-item--mobile'
+                            className="nav-drawer-item--mobile"
                             key={index}
                             label={item.name}
                             icon={item.icon(isSelectedStyle(item))}
@@ -57,29 +57,29 @@ function NavBarContent(props: Props) {
     function renderDesktopDrawer() {
         return (
             <Drawer
-                variant='permanent'
-                anchor='left'
-                className='app-drawer'
+                variant="permanent"
+                anchor="left"
+                className="app-drawer"
                 sx={{
-                    '& .MuiDrawer-paper': {
+                    "& .MuiDrawer-paper": {
                         borderWidth: 0
                     },
                 }}
             >
-                <div className='nav-content-sections-holder'>
-                    <div className='section'>
+                <div className="nav-content-sections-holder">
+                    <div className="section">
                         {DRAWER_ITEMS.map((item, index) => {
                             return (
                                 <div
                                     key={index}
-                                    className='nav-drawer-item'
+                                    className="nav-drawer-item"
                                     onClick={() => {
                                         dispatch(selectedDrawerItemUpdate(item))
                                         navigateTo(router, item, true)
                                     }}
                                 >
                                     {item.icon(isSelectedStyle(item))}
-                                    {isMobile && <div className='nav-drawer-item-text'>
+                                    {isMobile && <div className="nav-drawer-item-text">
                                         {item.name}
                                     </div>}
                                 </div>

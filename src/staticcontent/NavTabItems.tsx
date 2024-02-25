@@ -1,4 +1,4 @@
-import { strings } from '../localisation/strings'
+import { strings } from "../localisation/strings"
 import { TabItem } from "../types/navTab.types";
 
 export const TAB_ITEMS: TabItem[] = [

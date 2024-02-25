@@ -8,11 +8,11 @@ import './NavTabs.scss';
 import { TabItem } from '../../types/navTab.types';
 import { strings } from '../../localisation/strings';
 
-interface Props {
+interface NavTabs {
 
 }
 
-function NavTabs(_props: Props) {
+function NavTabs(_props: NavTabs) {
     const spacing = 12 / TAB_ITEMS.length;
     const dispatch = useDispatch();
     const { selectedFilterItem } = useSelector((state: any) => state.feed);
@@ -32,8 +32,8 @@ function NavTabs(_props: Props) {
     }
 
     return (
-        <div className='tab-container'>
-            <div className='tabs'>
+        <div className="tab-container">
+            <div className="tabs">
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid container spacing={1}>
                         <Grid container item spacing={1}>

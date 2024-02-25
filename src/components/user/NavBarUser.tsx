@@ -1,24 +1,24 @@
-import React from 'react'
-import withRouter, { Router } from '../hoc/withRouter'
+import React from "react"
+import withRouter, { Router } from "../hoc/withRouter"
 
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
-import './NavBarUser.scss'
+import "./NavBarUser.scss"
 
-interface Props {
+interface NavBarUserProps {
     router: Router
 }
 
-function NavBarUser(props: Props) {
+function NavBarUser(props: NavBarUserProps) {
     const { router } = props;
 
     function handleUserClick() {
-        router.navigate('/profile')
+        router.navigate("/profile")
     }
 
     return (
-        <div className='toolbar-user'>
-            <AccountCircleIcon onClick={handleUserClick} className='toolbar-user-icon' color='primary' />
+        <div className="toolbar-user">
+            <AccountCircleIcon onClick={handleUserClick} className="toolbar-user-icon" color="primary" />
         </div>
     )
 }

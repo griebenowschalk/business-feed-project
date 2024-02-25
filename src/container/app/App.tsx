@@ -4,10 +4,10 @@ import { theme } from '../../theme/theme';
 import { Provider } from 'react-redux';
 import { GlobalStyles } from '../../helpers/stylingHelper';
 
-import store from '../../redux/store';
-import LandingPage from '../landingpage/LandingPage';
+import store from "../../redux/store";
+import LandingPage from "../landingpage/LandingPage";
 
-import '../../scss/global.scss';
+import "../../scss/global.scss";
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
       <Provider store={store}>
         <BrowserRouter>
           <Routes>
-            <Route path='/home' element={<LandingPage />} />
-            <Route path='*' element={<LandingPage />} />
+            <Route path="/home" element={<LandingPage />} />
+            <Route path="*" element={<LandingPage />} />
           </Routes>
         </BrowserRouter>
       </Provider>

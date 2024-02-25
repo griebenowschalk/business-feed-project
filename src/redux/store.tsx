@@ -1,9 +1,9 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { thunk } from 'redux-thunk';
+import { configureStore } from "@reduxjs/toolkit";
+import { thunk } from "redux-thunk";
 
 // Import your reducers here
-import navbarSlice from './slice/navbarSlice';
-import feedSlice from './slice/feedSlice';
+import navbarSlice from "./slice/navbarSlice";
+import feedSlice from "./slice/feedSlice";
 
 // Create the store
 const store = configureStore({

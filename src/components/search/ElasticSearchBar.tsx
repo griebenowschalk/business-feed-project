@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react'
-import { IconButton, InputBase } from '@mui/material'
-import { strings } from '../../localisation/strings'
-import { isEmpty } from 'lodash'; // Import lodash library
+import React, { useEffect } from "react"
+import { IconButton, InputBase } from "@mui/material"
+import { strings } from "../../localisation/strings"
+import { isEmpty } from "lodash"; // Import lodash library
 
-import SearchIcon from '@mui/icons-material/SearchRounded'
-import ClearIcon from '@mui/icons-material/Clear'
+import SearchIcon from "@mui/icons-material/SearchRounded"
+import ClearIcon from "@mui/icons-material/Clear"
 
-import './ElasticSearchBar.scss'
+import "./ElasticSearchBar.scss"
 
-interface Props {
+interface ElasticSearchBarProps {
     value?: string | undefined
     onChange: (value: string) => void
     placeholder: string
@@ -16,9 +16,9 @@ interface Props {
     initialValue?: string
 }
 
-function ElasticSearchBar(props: Props) {
+function ElasticSearchBar(props: ElasticSearchBarProps) {
     const { value, onChange, placeholder, initialValue } = props
-    const [searchTerm, setSearchTerm] = React.useState(initialValue ? initialValue : '')
+    const [searchTerm, setSearchTerm] = React.useState(initialValue ? initialValue : "")
 
     useEffect(() => {
         if (props?.onRef) {
@@ -29,22 +29,22 @@ function ElasticSearchBar(props: Props) {
     }, [])
 
     function clear() {
-        setSearchTerm('')
+        setSearchTerm("")
     }
 
     return (
-        <div className='elastic-search-bar-root'>
-            <div className='rounded-container'>
+        <div className="elastic-search-bar-root">
+            <div className="rounded-container">
                 <IconButton>
                     <SearchIcon />
                 </IconButton>
 
                 <InputBase
-                    className='input'
-                    name='searchbar'
+                    className="input"
+                    name="searchbar"
                     placeholder={placeholder}
                     value={value === undefined ? searchTerm : value}
-                    inputProps={{ 'aria-label': strings.search }}
+                    inputProps={{ "aria-label": strings.search }}
                     onChange={(e: any) => {
                         setSearchTerm(e.target.value)
                         onChange(e.target.value)
@@ -53,7 +53,7 @@ function ElasticSearchBar(props: Props) {
                 {!isEmpty(value) && (
                     <IconButton
                         onClick={() => {
-                            onChange('')
+                            onChange("")
                         }}
                     >
                         <ClearIcon />

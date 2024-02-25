@@ -1,22 +1,27 @@
 @import "../../scss/global.scss";
+@import "../../scss/scrollbar.scss";
 
 .home-container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    overflow-y: hidden;
 
     @extend .responsive-container-padding;
 
     .view-content-header {
         position: relative;
-        // margin-left: 5px;
     }
 
     .content {
         position: relative;
         flex: 1;
         margin-top: $pm-half;
-        // margin-left: 5px;
+        margin-bottom: calc($tool-bar-height + $pm-half);
+
+        @extend .layout-scrollbar; 
+
+        @include sm {
+            margin-bottom: 0px;
+        }
     }
 }

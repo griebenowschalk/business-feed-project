@@ -60,7 +60,7 @@ export const feedDemoConfig: TContentComponent[] = [
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
         postImage: `https://fakeimg.pl/1200x800/`,
         postTime: "2022-09-04",
-        postDescription: ' insert dummy copy ',
+        postDescription: " insert dummy copy ",
     },
     {
         title: loremIpsum().toString().slice(0, Math.floor(Math.random() * 20)),
@@ -80,7 +80,7 @@ export const feedDemoConfig: TContentComponent[] = [
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
         postImage: `https://fakeimg.pl/1200x400/`,
         postTime: "2022-09-03",
-        postDescription: ' insert dummy copy ',
+        postDescription: " insert dummy copy ",
     },
     {
         title: loremIpsum().toString().slice(0, Math.floor(Math.random() * 20)),

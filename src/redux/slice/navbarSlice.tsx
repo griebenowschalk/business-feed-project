@@ -1,6 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { NavDrawerItem } from '../../types/navBar.types';
-import { findURLRelatingDrawerItem } from '../../helpers/navigationHelper';
+import { createSlice } from "@reduxjs/toolkit";
+import { NavDrawerItem } from "../../types/navBar.types";
+import { findURLRelatingDrawerItem } from "../../helpers/navigationHelper";
 
 interface NavbarState {
     selectedDrawerItem: NavDrawerItem
@@ -11,7 +11,7 @@ const initialState: NavbarState = {
 };
 
 const navbarSlice = createSlice({
-    name: 'navbar',
+    name: "navbar",
     initialState,
     reducers: {
         selectedDrawerItemUpdate: (state, action) => {

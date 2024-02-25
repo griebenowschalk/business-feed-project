@@ -1,25 +1,25 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { TContentComponent } from '../../types/content.types';
-import { feedDemoConfig } from '../../staticcontent/dummy-data';
+import { createSlice } from "@reduxjs/toolkit";
+import { TContentComponent } from "../../types/content.types";
+import { feedDemoConfig } from "../../staticcontent/dummy-data";
 
 interface FeedState {
     feed: TContentComponent[],
-    selectedFilterItem: 'business' | 'social' | 'hr' | 'safety' | 'all',
+    selectedFilterItem: "business" | "social" | "hr" | "safety" | "all",
 }
 
 const initialState: FeedState = {
     feed: feedDemoConfig,
-    selectedFilterItem: 'all',
+    selectedFilterItem: "all",
 };
 
 const feedSlice = createSlice({
-    name: 'feed',
+    name: "feed",
     initialState,
     reducers: {
         selectedFilterItemUpdate: (state, action) => {
             state.selectedFilterItem = action.payload;
             state.feed = feedDemoConfig.filter((item) => {
-                return item.tag === action.payload || action.payload === 'all';
+                return item.tag === action.payload || action.payload === "all";
             });
         }
     },

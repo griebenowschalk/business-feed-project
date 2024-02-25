@@ -1,0 +1,9 @@
+@import "../../scss/variables.scss";
+@import "../../scss/global.scss";
+@import '../../sass/scrollbars.scss';
+
+.feed-container {
+    @extend .layout-scrollbar;
+    
+    overflow-y: hidden;
+}

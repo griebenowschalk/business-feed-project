@@ -1,5 +1,5 @@
-import { createTheme } from '@mui/material/styles'
-import styles from './style.module.scss'
+import { createTheme } from "@mui/material/styles"
+import styles from "./style.module.scss"
 
 export const NAV_DRAWER_WIDTH = styles.nav_bar_width
 export const TOOLBAR_HEIGHT = styles.tool_bar_height
@@ -30,15 +30,15 @@ export const theme = createTheme({
     palette: {
         primary: {
             main: styles.primary,
-            contrastText: '#ffffff',
+            contrastText: "#ffffff",
         },
         secondary: {
             main: styles.secondary,
-            contrastText: '#ffffff',
+            contrastText: "#ffffff",
         },
         error: {
             main: styles.error,
-            contrastText: '#ffffff',
+            contrastText: "#ffffff",
         },
         background: {
             default: styles.container_background_color,
