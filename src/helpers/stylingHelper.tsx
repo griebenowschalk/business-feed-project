@@ -1,9 +1,5 @@
-<<<<<<< Updated upstream
 import { TOOLBAR_HEIGHT, NAV_DRAWER_WIDTH } from '../theme/theme'
 import { Global, css } from '@emotion/react'
-=======
-import { TOOLBAR_HEIGHT, NAV_DRAWER_WIDTH } from "../theme/theme"
->>>>>>> Stashed changes
 
 export const responsiveNavigationStyle = (theme: any) => ({
     toolbarAwareContainer: {
