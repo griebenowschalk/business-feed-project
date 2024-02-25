@@ -6,7 +6,11 @@ Before running any other commands, ensure that all dependencies have been instal
 npm install
 ```
 
----
+Then build the project:
+
+```
+npm run build
+```
 
 To serve application locally:
 
@@ -15,6 +19,14 @@ npm run dev
 ```
 
 Which should host the application [here](http://localhost:5173/).
+
+---
+
+To run test cases:
+
+```
+npm run test
+```
 
 ---
 

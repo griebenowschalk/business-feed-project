@@ -5,8 +5,6 @@ import NavigationAware from '../../components/navigation/NavigationAware';
 import NotFound from '../notfound/NotFound';
 import Home from '../home/Home';
 
-import './LandingPage.scss';
-
 function LandingPage() {
     return (
         <NavigationAware>
