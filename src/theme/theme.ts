@@ -47,7 +47,15 @@ export const theme = createTheme({
             primary: styles.text_dark,
         },
     },
+    components: {
+        MuiTypography: {
+            defaultProps: {
+                fontFamily: "Roboto, sans-serif",
+            }
+        },
+    },
     typography: {
-        fontFamily: ['Asap'].join(','),
-    }
+        fontFamily: "Roboto, sans-serif",
+    },
+    
 })

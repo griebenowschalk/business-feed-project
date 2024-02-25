@@ -5,7 +5,7 @@ import { NavDrawerItem } from '../../types/navBar.types'
 import { selectedDrawerItemUpdate } from '../../redux/slice/navbarSlice';
 import withRouter, { Router } from '../hoc/withRouter';
 import { findURLRelatingDrawerItem, navigateTo } from '../../helpers/navigationHelper';
-import { BottomNavigation, BottomNavigationAction, Drawer } from '@mui/material';
+import { BottomNavigation, BottomNavigationAction, Drawer, Typography } from '@mui/material';
 import { NAV_DRAWER_WIDTH } from '../../theme/theme';
 import { DRAWER_ITEMS } from '../../staticcontent/DrawerItems'
 

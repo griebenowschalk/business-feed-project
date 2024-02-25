@@ -8,4 +8,9 @@ export const strings = {
     hr: 'HR',
     safety: 'Safety',
     search: 'Search...',
+    all: 'all',
+    business_filter: 'business',
+    social_filter: 'social',
+    hr_filter: 'hr',
+    safety_filter: 'safety',
 };

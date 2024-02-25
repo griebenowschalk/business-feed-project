@@ -5,21 +5,21 @@ export const TAB_ITEMS: TabItem[] = [
     {
         id: 0,
         name: strings.business,
-        onClick: () => { }
+        value: strings.business_filter
     },
     {
         id: 1,
         name: strings.social,
-        onClick: () => { }
+        value: strings.social_filter
     },
     {
         id: 2,
         name: strings.hr,
-        onClick: () => { }
+        value: strings.hr_filter
     },
     {
         id: 3,
         name: strings.safety,
-        onClick: () => { }
+        value: strings.safety_filter
     },
 ]

@@ -1,4 +1,5 @@
 import { TOOLBAR_HEIGHT, NAV_DRAWER_WIDTH } from '../theme/theme'
+import { Global, css } from '@emotion/react'
 
 export const responsiveNavigationStyle = (theme: any) => ({
     toolbarAwareContainer: {
@@ -25,3 +26,20 @@ export const responsiveNavigationStyle = (theme: any) => ({
         },
     }
 })
+
+export const GlobalStyles = () => (
+    <Global
+        styles={css`
+            #root {
+                height: 100vh;
+            }
+            body, html {
+                margin: 0;
+                font-family: Roboto, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                text-rendering: optimizeLegibility;
+            }
+        `}
+    />
+);
