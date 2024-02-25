@@ -11,9 +11,10 @@ const store = configureStore({
         navbar: navbarSlice,
         feed: feedSlice,
     },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
-        serializableCheck: false
-    }).concat(thunk),
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: false,
+        }).concat(thunk),
 });
 
 export default store;

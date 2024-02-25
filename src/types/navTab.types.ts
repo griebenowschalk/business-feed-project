@@ -1,5 +1,5 @@
 export type TabItem = {
-    id: number
-    name: string
-    value: string
-}
+    id: number;
+    name: string;
+    value: string;
+};

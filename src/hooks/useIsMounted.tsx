@@ -6,7 +6,7 @@ export function useIsMounted() {
 
     useEffect(() => {
         return () => {
-            isMountedRef.current = false
+            isMountedRef.current = false;
         };
     }, []);
 

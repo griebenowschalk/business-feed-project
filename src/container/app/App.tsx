@@ -10,19 +10,19 @@ import LandingPage from '../landingpage/LandingPage';
 import '../../scss/global.scss';
 
 function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Provider store={store}>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/home' element={<LandingPage />} />
-            <Route path='*' element={<LandingPage />} />
-          </Routes>
-        </BrowserRouter>
-      </Provider>
-    </ThemeProvider>
-  )
+    return (
+        <ThemeProvider theme={theme}>
+            <GlobalStyles />
+            <Provider store={store}>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/home" element={<LandingPage />} />
+                        <Route path="*" element={<LandingPage />} />
+                    </Routes>
+                </BrowserRouter>
+            </Provider>
+        </ThemeProvider>
+    );
 }
 
-export default App
+export default App;

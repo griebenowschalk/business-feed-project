@@ -1,48 +1,43 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
-import withRouter, { Router } from '../../components/hoc/withRouter';
+import withRouter from '../../components/hoc/withRouter';
 import { strings } from '../../localisation/strings';
+import { FeedState } from '../../redux/slice/feedSlice';
 
 import ElasticSearchBar from '../../components/search/ElasticSearchBar';
 import NavTabs from '../../components/navtabs/NavTabs';
 import FeedCard from '../../components/feed/FeedCard';
 
-import '../../scss/global.scss'
-import './Home.scss'
+import '../../scss/global.scss';
+import './Home.scss';
 
-interface Props {
-    router: Router;
-}
-
-function Home(props: Props) {
-    const { router } = props;
-
-    const { feed } = useSelector((state: any) => state.feed);
+function Home() {
+    const { feed } = useSelector((state: any) => state.feed as FeedState);
     const [textSearch, setTextSearch] = useState<string>('');
     const searchBarRef = useRef(null);
 
     return (
-        <div className='home-container'>
-            <div className='view-content-header'>
+        <div className="home-container">
+            <div className="view-content-header">
                 <ElasticSearchBar
                     placeholder={strings.search}
                     onChange={(searchQuery) => {
-                        setTextSearch(searchQuery)
+                        setTextSearch(searchQuery);
                     }}
                     onRef={(ref: any) => {
                         searchBarRef.current = ref;
                     }}
                     initialValue={textSearch}
                 />
-                <NavTabs/>
+                <NavTabs />
             </div>
-            <div className='content'>
+            <div className="content">
                 {feed.map((item: any, index: number) => {
                     return <FeedCard key={index} item={item} />;
                 })}
             </div>
         </div>
     );
-};
+}
 
 export default withRouter(Home);

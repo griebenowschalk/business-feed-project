@@ -1,5 +1,7 @@
-export function getTimeDifference(date: Date): string {
-    const currentDate = new Date();
+export function getTimeDifference(
+    date: Date,
+    currentDate: Date = new Date(),
+): string {
     const timeDifference = currentDate.getTime() - date.getTime();
 
     const millisecondsInYear = 1000 * 60 * 60 * 24 * 365;

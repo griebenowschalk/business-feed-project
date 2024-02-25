@@ -1,6 +1,11 @@
-import { NavDrawerItem } from "../types/navBar.types"
-import { strings } from '../localisation/strings'
-import { AddHomeOutlined, GridViewOutlined, ChatBubbleOutlineOutlined, AdminPanelSettingsOutlined } from '@mui/icons-material';
+import { NavDrawerItem } from '../types/navBar.types';
+import { strings } from '../localisation/strings';
+import {
+    AddHomeOutlined,
+    GridViewOutlined,
+    ChatBubbleOutlineOutlined,
+    AdminPanelSettingsOutlined,
+} from '@mui/icons-material';
 
 export const DRAWER_ITEMS: NavDrawerItem[] = [
     {
@@ -18,13 +23,17 @@ export const DRAWER_ITEMS: NavDrawerItem[] = [
     {
         id: 2,
         name: strings.chat,
-        icon: (className: string) => <ChatBubbleOutlineOutlined className={className} />,
+        icon: (className: string) => (
+            <ChatBubbleOutlineOutlined className={className} />
+        ),
         route: '/chat',
     },
     {
         id: 3,
         name: strings.admin,
-        icon: (className: string) => <AdminPanelSettingsOutlined className={className} />,
+        icon: (className: string) => (
+            <AdminPanelSettingsOutlined className={className} />
+        ),
         route: '/admin',
     },
-]
+];

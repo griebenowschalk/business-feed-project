@@ -1,24 +1,32 @@
-import { CardActions, CardContent, CardHeader, CardMedia, IconButton, Card, Typography } from '@mui/material';
+import {
+    CardActions,
+    CardContent,
+    CardHeader,
+    CardMedia,
+    IconButton,
+    Card,
+} from '@mui/material';
 import { Share, ThumbUpAltOutlined } from '@mui/icons-material';
 import { TContentComponent } from '../../types/content.types';
-
-import React from 'react';
-
-import './FeedCard.scss';
 import { getTimeDifference } from '../../helpers/stringHelper';
 
+import './FeedCard.scss';
+
 interface Props {
-    item: TContentComponent
+    item: TContentComponent;
 }
 
 function FeedCard(props: Props) {
     const { item } = props;
 
     return (
-        <Card sx={{boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px;'}} className='feed-card-container'>
+        <Card
+            sx={{ boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px;' }}
+            className="feed-card-container"
+        >
             <CardHeader
                 avatar={
-                    <img className='avatar' src={item.avatar} alt='avatar' />
+                    <img className="avatar" src={item.avatar} alt="avatar" />
                 }
                 action={
                     <CardActions disableSpacing>
@@ -36,18 +44,14 @@ function FeedCard(props: Props) {
             <CardMedia
                 component="img"
                 image={item.postImage}
-                about='Could not load image'
+                about="Could not load image"
             />
             <CardContent>
-                <div className='title'>
-                    {item.title}
-                </div>
-                <div className='description'>
-                    {item.postDescription}
-                </div>
+                <div className="title">{item.title}</div>
+                <div className="description">{item.postDescription}</div>
             </CardContent>
         </Card>
     );
-};
+}
 
 export default FeedCard;

@@ -1,5 +1,5 @@
-import { TOOLBAR_HEIGHT, NAV_DRAWER_WIDTH } from '../theme/theme'
-import { Global, css } from '@emotion/react'
+import { TOOLBAR_HEIGHT, NAV_DRAWER_WIDTH } from '../theme/theme';
+import { Global, css } from '@emotion/react';
 
 export const responsiveNavigationStyle = (theme: any) => ({
     toolbarAwareContainer: {
@@ -8,7 +8,7 @@ export const responsiveNavigationStyle = (theme: any) => ({
         flexDirection: 'row',
         minWidth: '100%',
         width: '100%',
-        marginTop: TOOLBAR_HEIGHT
+        marginTop: TOOLBAR_HEIGHT,
     },
     drawer: {
         [theme?.breakpoints?.up('sm')]: {
@@ -24,8 +24,8 @@ export const responsiveNavigationStyle = (theme: any) => ({
             width: `calc(100% - ${NAV_DRAWER_WIDTH})`,
             minWidth: `calc(100% - ${NAV_DRAWER_WIDTH})`,
         },
-    }
-})
+    },
+});
 
 export const GlobalStyles = () => (
     <Global
@@ -33,7 +33,8 @@ export const GlobalStyles = () => (
             #root {
                 height: 100vh;
             }
-            body, html {
+            body,
+            html {
                 margin: 0;
                 font-family: Roboto, sans-serif;
                 -webkit-font-smoothing: antialiased;
