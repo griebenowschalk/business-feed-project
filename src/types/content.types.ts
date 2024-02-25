@@ -7,4 +7,4 @@ export type TContentComponent = {
     postImage?: string;
     postTime: string;
     postDescription?: string;
-}
+};

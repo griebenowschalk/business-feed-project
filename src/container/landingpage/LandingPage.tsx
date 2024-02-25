@@ -1,19 +1,11 @@
-import React from "react";
-import withRouter, { Router } from "../../components/hoc/withRouter";
-import { Route, Routes } from "react-router-dom"
-import { DRAWER_ITEMS } from "../../staticcontent/DrawerItems";
+import { Route, Routes } from 'react-router-dom';
+import { DRAWER_ITEMS } from '../../staticcontent/DrawerItems';
 
-import NavigationAware from "../../components/navigation/NavigationAware";
-import NotFound from "../notfound/NotFound";
-import Home from "../home/Home";
+import NavigationAware from '../../components/navigation/NavigationAware';
+import NotFound from '../notfound/NotFound';
+import Home from '../home/Home';
 
-import "./LandingPage.scss";
-
-interface LandingPageProps {
-
-}
-
-function LandingPage(_props: LandingPageProps) {
+function LandingPage() {
     return (
         <NavigationAware>
             <Routes>
@@ -25,6 +17,6 @@ function LandingPage(_props: LandingPageProps) {
             </Routes>
         </NavigationAware>
     );
-};
+}
 
 export default LandingPage;

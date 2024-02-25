@@ -1,15 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { css } from "@emotion/css";
-import { ClassNameMap } from "@mui/material";
-import _ from "lodash";
+import { useState, useEffect } from 'react';
+import { css } from '@emotion/css';
+import { ClassNameMap } from '@mui/material';
+import _ from 'lodash';
 
-function useCustomStyles(styles: any, theme: any) {
+interface GeneratedStyles {
+    [key: string]: string;
+}
+
+const useCustomStyles = (styles: any, theme: any) => {
     const [classes, setClasses] = useState<ClassNameMap>({});
 
     useEffect(() => {
         if (!_.isNil(classes)) {
-            const evaluatedStyles = typeof styles === "function" ? styles(theme) : styles;
-            const generated: any = {};
+            const evaluatedStyles: GeneratedStyles =
+                typeof styles === 'function' ? styles(theme) : styles;
+            const generated: GeneratedStyles = {};
 
             for (const key in evaluatedStyles) {
                 generated[key] = css(evaluatedStyles[key]);

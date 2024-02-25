@@ -1,10 +1,9 @@
-import InfiniteLoader from "react-window-infinite-loader";
-import { VariableSizeList } from "react-window";
+import InfiniteLoader from 'react-window-infinite-loader';
+import { VariableSizeList } from 'react-window';
 
-import React, { useEffect, useState } from "react";
-import { TContentComponent } from "../../types/content.types";
-import FeedCard from "./FeedCard";
-import AutoSizer from "react-virtualized-auto-sizer";
+import { TContentComponent } from '../../types/content.types';
+import FeedCard from './FeedCard';
+import AutoSizer from 'react-virtualized-auto-sizer';
 
 interface FeedProps {
     feedItems: TContentComponent[];
@@ -13,9 +12,9 @@ interface FeedProps {
 }
 
 interface Props {
-    index: number
-    data: any
-    style: any
+    index: number;
+    data: any;
+    style: any;
 }
 
 const Row = (props: Props) => {
@@ -25,20 +24,25 @@ const Row = (props: Props) => {
 };
 
 function Feed(props: FeedProps) {
-    let data = {
-        renderSet: props.feedItems
-    }
+    const data = {
+        renderSet: props.feedItems,
+    };
     const isItemLoaded = (index: number) => index < data.renderSet.length;
-    const itemCount = props.hasMore ? data.renderSet.length + 1 : data.renderSet.length;
+    const itemCount = props.hasMore
+        ? data.renderSet.length + 1
+        : data.renderSet.length;
 
     return (
-
-        <AutoSizer >
+        <AutoSizer>
             {({ width, height }) => (
-                <InfiniteLoader isItemLoaded={isItemLoaded} itemCount={itemCount} loadMoreItems={props.next}>
+                <InfiniteLoader
+                    isItemLoaded={isItemLoaded}
+                    itemCount={itemCount}
+                    loadMoreItems={props.next}
+                >
                     {({ onItemsRendered, ref }) => (
                         <VariableSizeList
-                        className="feed-container"
+                            className="feed-container"
                             height={height}
                             itemCount={data.renderSet.length}
                             itemData={data}
@@ -53,8 +57,7 @@ function Feed(props: FeedProps) {
                 </InfiniteLoader>
             )}
         </AutoSizer>
-
     );
-};
+}
 
 export default Feed;

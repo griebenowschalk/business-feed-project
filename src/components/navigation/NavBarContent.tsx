@@ -1,32 +1,38 @@
-import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { strings } from '../../localisation/strings'
-import { NavDrawerItem } from '../../types/navBar.types'
-import { selectedDrawerItemUpdate } from '../../redux/slice/navbarSlice';
+import { NavDrawerItem } from '../../types/navBar.types';
+import {
+    NavbarState,
+    selectedDrawerItemUpdate,
+} from '../../redux/slice/navbarSlice';
 import withRouter, { Router } from '../hoc/withRouter';
-import { findURLRelatingDrawerItem, navigateTo } from '../../helpers/navigationHelper';
-import { BottomNavigation, BottomNavigationAction, Drawer, Typography } from '@mui/material';
-import { NAV_DRAWER_WIDTH } from '../../theme/theme';
-import { DRAWER_ITEMS } from '../../staticcontent/DrawerItems'
+import { navigateTo } from '../../helpers/navigationHelper';
+import {
+    BottomNavigation,
+    BottomNavigationAction,
+    Drawer,
+} from '@mui/material';
+import { DRAWER_ITEMS } from '../../staticcontent/DrawerItems';
 
-import "./Navigation.scss"
+import './Navigation.scss';
 
-interface NavBarContentProps {
-    router: Router,
-    isMobile: boolean
+interface Props {
+    router: Router;
+    isMobile: boolean;
 }
 
-function NavBarContent(props: NavBarContentProps) {
-    const { router, isMobile } = props
-    const dispatch = useDispatch()
-    const { selectedDrawerItem } = useSelector((state: any) => state.navbar)
+function NavBarContent(props: Props) {
+    const { router, isMobile } = props;
+    const dispatch = useDispatch();
+    const { selectedDrawerItem } = useSelector(
+        (state: any) => state.navbar as NavbarState,
+    );
 
     function isSelected(item: NavDrawerItem) {
-        return item.id === selectedDrawerItem.id
+        return item.id === selectedDrawerItem.id;
     }
 
     function isSelectedStyle(item: NavDrawerItem) {
-        return `nav-drawer-item-icon${isSelected(item) ? "--selected" : ""}`
+        return `nav-drawer-item-icon${isSelected(item) ? '--selected' : ''}`;
     }
 
     function renderMobileDrawer() {
@@ -35,8 +41,8 @@ function NavBarContent(props: NavBarContentProps) {
                 showLabels
                 value={selectedDrawerItem.id}
                 onChange={(_event, newValue) => {
-                    dispatch(selectedDrawerItemUpdate(DRAWER_ITEMS[newValue]))
-                    navigateTo(router, DRAWER_ITEMS[newValue], true)
+                    dispatch(selectedDrawerItemUpdate(DRAWER_ITEMS[newValue]));
+                    navigateTo(router, DRAWER_ITEMS[newValue], true);
                 }}
                 className="mobile-nav-bar"
             >
@@ -48,10 +54,10 @@ function NavBarContent(props: NavBarContentProps) {
                             label={item.name}
                             icon={item.icon(isSelectedStyle(item))}
                         />
-                    )
+                    );
                 })}
             </BottomNavigation>
-        )
+        );
     }
 
     function renderDesktopDrawer() {
@@ -61,8 +67,8 @@ function NavBarContent(props: NavBarContentProps) {
                 anchor="left"
                 className="app-drawer"
                 sx={{
-                    "& .MuiDrawer-paper": {
-                        borderWidth: 0
+                    '& .MuiDrawer-paper': {
+                        borderWidth: 0,
                     },
                 }}
             >
@@ -74,28 +80,28 @@ function NavBarContent(props: NavBarContentProps) {
                                     key={index}
                                     className="nav-drawer-item"
                                     onClick={() => {
-                                        dispatch(selectedDrawerItemUpdate(item))
-                                        navigateTo(router, item, true)
+                                        dispatch(
+                                            selectedDrawerItemUpdate(item),
+                                        );
+                                        navigateTo(router, item, true);
                                     }}
                                 >
                                     {item.icon(isSelectedStyle(item))}
-                                    {isMobile && <div className="nav-drawer-item-text">
-                                        {item.name}
-                                    </div>}
+                                    {isMobile && (
+                                        <div className="nav-drawer-item-text">
+                                            {item.name}
+                                        </div>
+                                    )}
                                 </div>
-                            )
+                            );
                         })}
                     </div>
                 </div>
             </Drawer>
-        )
+        );
     }
 
-    return (
-        <div>
-            {isMobile ? renderMobileDrawer() : renderDesktopDrawer()}
-        </div>
-    )
+    return <div>{isMobile ? renderMobileDrawer() : renderDesktopDrawer()}</div>;
 }
 
-export default withRouter(NavBarContent)
+export default withRouter(NavBarContent);

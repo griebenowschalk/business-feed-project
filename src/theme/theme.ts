@@ -1,8 +1,8 @@
-import { createTheme } from "@mui/material/styles"
-import styles from "./style.module.scss"
+import { createTheme } from '@mui/material/styles';
+import styles from './style.module.scss';
 
-export const NAV_DRAWER_WIDTH = styles.nav_bar_width
-export const TOOLBAR_HEIGHT = styles.tool_bar_height
+export const NAV_DRAWER_WIDTH = styles.nav_bar_width;
+export const TOOLBAR_HEIGHT = styles.tool_bar_height;
 
 export const colors = {
     primary: styles.primary,
@@ -10,7 +10,7 @@ export const colors = {
     error: styles.error,
     container_background_color: styles.container_background_color,
     text_dark: styles.text_dark,
-}
+};
 
 /**
  * Refer to
@@ -30,15 +30,15 @@ export const theme = createTheme({
     palette: {
         primary: {
             main: styles.primary,
-            contrastText: "#ffffff",
+            contrastText: '#ffffff',
         },
         secondary: {
             main: styles.secondary,
-            contrastText: "#ffffff",
+            contrastText: '#ffffff',
         },
         error: {
             main: styles.error,
-            contrastText: "#ffffff",
+            contrastText: '#ffffff',
         },
         background: {
             default: styles.container_background_color,
@@ -50,12 +50,11 @@ export const theme = createTheme({
     components: {
         MuiTypography: {
             defaultProps: {
-                fontFamily: "Roboto, sans-serif",
-            }
+                fontFamily: 'Roboto, sans-serif',
+            },
         },
     },
     typography: {
-        fontFamily: "Roboto, sans-serif",
+        fontFamily: 'Roboto, sans-serif',
     },
-    
-})
+});
