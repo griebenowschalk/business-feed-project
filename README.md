@@ -30,7 +30,7 @@ npm run test
 
 ---
 
-Docker command-line instructions:
+Docker local command-line instructions:
 
 Build image
 
@@ -60,6 +60,8 @@ Build image with hub username
 docker build -t <docker-hub-username>/wyzetalk-project .
 docker push <docker-hub-username>/wyzetalk-project:latest
 ```
+
+---
 
 To serve application using Kubernetes:
 
