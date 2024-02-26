@@ -16,6 +16,11 @@ interface Props {
     initialValue?: string;
 }
 
+/**
+ * Elastic search bar component for searching feed items by author or title
+ * @param props 
+ * @returns 
+ */
 function ElasticSearchBar(props: Props) {
     const { value, onChange, placeholder, initialValue } = props;
     const [searchTerm, setSearchTerm] = useState(

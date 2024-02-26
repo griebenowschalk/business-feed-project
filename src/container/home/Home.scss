@@ -23,5 +23,15 @@
         @include sm {
             margin-bottom: 0px;
         }
+
+        .no-results {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            font-size: 20px;
+            color: $text-dark;
+        }
     }
 }

@@ -23,6 +23,11 @@ const Row = (props: Props) => {
     return <FeedCard style={style} item={item} />;
 };
 
+/**
+ * Functional component to render the feed using react-window and infinite-loader to increase
+ * performance and reduce the load time of the feed. Will come in handy when the feed has a large
+ * number of items coming from a network call.
+ */
 function Feed(props: FeedProps) {
     const data = {
         renderSet: props.feedItems,

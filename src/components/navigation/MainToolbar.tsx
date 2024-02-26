@@ -13,6 +13,9 @@ interface MainToolBarProps {
     router: Router;
 }
 
+/**
+ * Main toolbar component that renders the logo, notifications and user icon
+ */
 function MainToolbar(props: MainToolBarProps) {
     const { router } = props;
 

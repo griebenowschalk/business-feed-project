@@ -7,6 +7,9 @@ interface GeneratedStyles {
     [key: string]: string;
 }
 
+/**
+ * Convert custom styles to MUI classes
+ */
 const useCustomStyles = (styles: any, theme: any) => {
     const [classes, setClasses] = useState<ClassNameMap>({});
 

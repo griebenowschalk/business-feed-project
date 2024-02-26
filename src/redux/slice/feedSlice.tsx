@@ -12,10 +12,19 @@ const initialState: FeedState = {
     selectedFilterItem: 'all',
 };
 
+/**
+ * The feed slice to handle the feed state and actions
+ */
 const feedSlice = createSlice({
     name: 'feed',
     initialState,
     reducers: {
+        searchFeedUpdate: (state, action) => {
+            state.feed = feedDemoConfig.filter((item) => {
+                let searchValue = action.payload.toLowerCase();
+                return item.title.toLowerCase().includes(searchValue) || item.author?.toLowerCase().includes(searchValue) || action.payload === '';
+            });
+        },
         selectedFilterItemUpdate: (state, action) => {
             state.selectedFilterItem = action.payload;
             state.feed = feedDemoConfig.filter((item) => {
@@ -25,5 +34,5 @@ const feedSlice = createSlice({
     },
 });
 
-export const { selectedFilterItemUpdate } = feedSlice.actions;
+export const { selectedFilterItemUpdate, searchFeedUpdate } = feedSlice.actions;
 export default feedSlice.reducer;

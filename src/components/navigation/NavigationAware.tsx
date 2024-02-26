@@ -13,6 +13,10 @@ interface NavigationAwareProps {
     children: ReactNode;
 }
 
+/** 
+ * Navigation aware component that renders the main toolbar and the navigation drawer and
+ * wraps the child components in a responsive container
+ */
 function NavigationAware(props: NavigationAwareProps) {
     const { children } = props;
     const isMobile = useMediaQuery('(max-width:599px)'); //600px is sm

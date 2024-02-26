@@ -19,6 +19,7 @@
 
     .input {
         flex: 1;
+        width: calc(100% - $pm-double);
         margin: 0px 5px;
     }
 }

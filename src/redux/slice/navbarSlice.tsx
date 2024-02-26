@@ -10,6 +10,9 @@ const initialState: NavbarState = {
     selectedDrawerItem: findURLRelatingDrawerItem(window.location.pathname),
 };
 
+/**
+ * The navbar slice to handle the navbar state and actions
+ */
 const navbarSlice = createSlice({
     name: 'navbar',
     initialState,

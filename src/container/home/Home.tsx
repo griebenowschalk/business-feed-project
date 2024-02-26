@@ -1,8 +1,8 @@
 import { useState, useRef } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import withRouter from '../../components/hoc/withRouter';
 import { strings } from '../../localisation/strings';
-import { FeedState } from '../../redux/slice/feedSlice';
+import { FeedState, searchFeedUpdate } from '../../redux/slice/feedSlice';
 
 import ElasticSearchBar from '../../components/search/ElasticSearchBar';
 import NavTabs from '../../components/navtabs/NavTabs';
@@ -11,23 +11,14 @@ import FeedCard from '../../components/feed/FeedCard';
 import '../../scss/global.scss';
 import './Home.scss';
 
+/**
+ * The home component that displays the feed and search bar and filter tabs
+ * @returns Home component
+ */
 function Home() {
     const { feed } = useSelector((state: any) => state.feed as FeedState);
-    const [textSearch, setTextSearch] = useState<string>('');
+    const dispatch = useDispatch();
     const searchBarRef = useRef(null);
-    // const [count, setCount] = useState(5);
-    // const [hasMoreItems, setHasMoreItems] = useState(count < feed.length);
-
-    // useEffect(() => {
-    //     console.log(count);
-    // }, [count]);
-
-    // function nextPage() {
-    //     const newCount = count + 10;
-    //     const hasMoreItems = newCount < feed.length;
-    //     setCount(hasMoreItems ? newCount : feed.length);
-    //     setHasMoreItems(hasMoreItems);
-    // }
 
     return (
         <div className="home-container">
@@ -35,22 +26,25 @@ function Home() {
                 <ElasticSearchBar
                     placeholder={strings.search}
                     onChange={(searchQuery) => {
-                        setTextSearch(searchQuery);
+                        dispatch(searchFeedUpdate(searchQuery));
                     }}
                     onRef={(ref: any) => {
                         searchBarRef.current = ref;
                     }}
-                    initialValue={textSearch}
+                    initialValue={''}
                 />
                 <NavTabs />
             </div>
             <div className="content">
-                {feed.map((item: any, index: number) => {
-                    return <FeedCard style={{}} key={index} item={item} />;
-                })}
+                {feed.length ? feed.map((item: any, index: number) => {
+                    return <FeedCard key={index} item={item} />;
+                }) : <div className="no-results">{strings.no_results}</div>}
+                {/* 
+                    Future Improvement: To use infinite scroll instead and react-window list to improve performance
+                    <Feed hasMore={hasMoreItems} feedItems={feed.slice(0, count)} next={nextPage} /> 
+                */}
             </div>
         </div>
-        //  <Feed hasMore={hasMoreItems} feedItems={feed.slice(0, count)} next={nextPage} />
     );
 }
 

@@ -11,6 +11,10 @@ import { strings } from '../../localisation/strings';
 
 import './NavTabs.scss';
 
+/**
+ * The navigation tabs component for filtering feed items by tag
+ * @returns 
+ */
 function NavTabs() {
     const spacing = 12 / TAB_ITEMS.length;
     const dispatch = useDispatch();

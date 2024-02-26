@@ -1,3 +1,9 @@
+/**
+ * Converts the difference between two dates into a feed item friendly time difference string
+ * @param date date to get the time difference from
+ * @param currentDate current date to get the time difference to
+ * @returns feed item friendly time difference string
+ */
 export function getTimeDifference(
     date: Date,
     currentDate: Date = new Date(),

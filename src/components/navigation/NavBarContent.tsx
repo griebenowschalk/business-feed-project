@@ -20,6 +20,12 @@ interface Props {
     isMobile: boolean;
 }
 
+/**
+ * The navigation bar component that renders the drawer items base on the screen size
+ * and the selected item in the drawer
+ * @param props 
+ * @returns The navigation bar component
+ */
 function NavBarContent(props: Props) {
     const { router, isMobile } = props;
     const dispatch = useDispatch();

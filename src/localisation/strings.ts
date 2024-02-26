@@ -13,4 +13,6 @@ export const strings = {
     social_filter: 'social',
     hr_filter: 'hr',
     safety_filter: 'safety',
+    no_results: 'No results found',
+    no_image: 'Could not load image',
 };
