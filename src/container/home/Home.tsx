@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import withRouter from '../../components/hoc/withRouter';
 import { strings } from '../../localisation/strings';
@@ -36,9 +36,13 @@ function Home() {
                 <NavTabs />
             </div>
             <div className="content">
-                {feed.length ? feed.map((item: any, index: number) => {
-                    return <FeedCard key={index} item={item} />;
-                }) : <div className="no-results">{strings.no_results}</div>}
+                {feed.length ? (
+                    feed.map((item: any, index: number) => {
+                        return <FeedCard key={index} item={item} />;
+                    })
+                ) : (
+                    <div className="no-results">{strings.no_results}</div>
+                )}
                 {/* 
                     Future Improvement: To use infinite scroll instead and react-window list to improve performance
                     <Feed hasMore={hasMoreItems} feedItems={feed.slice(0, count)} next={nextPage} /> 

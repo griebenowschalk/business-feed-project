@@ -13,7 +13,7 @@ import './NavTabs.scss';
 
 /**
  * The navigation tabs component for filtering feed items by tag
- * @returns 
+ * @returns
  */
 function NavTabs() {
     const spacing = 12 / TAB_ITEMS.length;

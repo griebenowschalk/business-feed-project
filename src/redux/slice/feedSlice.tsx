@@ -21,8 +21,12 @@ const feedSlice = createSlice({
     reducers: {
         searchFeedUpdate: (state, action) => {
             state.feed = feedDemoConfig.filter((item) => {
-                let searchValue = action.payload.toLowerCase();
-                return item.title.toLowerCase().includes(searchValue) || item.author?.toLowerCase().includes(searchValue) || action.payload === '';
+                const searchValue: string = action.payload.toLowerCase();
+                return (
+                    item.title.toLowerCase().includes(searchValue) ||
+                    item.author?.toLowerCase().includes(searchValue) ||
+                    action.payload === ''
+                );
             });
         },
         selectedFilterItemUpdate: (state, action) => {

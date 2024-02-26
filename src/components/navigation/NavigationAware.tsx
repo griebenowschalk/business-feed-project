@@ -13,7 +13,7 @@ interface NavigationAwareProps {
     children: ReactNode;
 }
 
-/** 
+/**
  * Navigation aware component that renders the main toolbar and the navigation drawer and
  * wraps the child components in a responsive container
  */

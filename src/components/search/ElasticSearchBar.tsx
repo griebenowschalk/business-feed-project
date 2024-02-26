@@ -18,8 +18,8 @@ interface Props {
 
 /**
  * Elastic search bar component for searching feed items by author or title
- * @param props 
- * @returns 
+ * @param props
+ * @returns
  */
 function ElasticSearchBar(props: Props) {
     const { value, onChange, placeholder, initialValue } = props;

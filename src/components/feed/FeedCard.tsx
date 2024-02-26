@@ -15,13 +15,13 @@ import { strings } from '../../localisation/strings';
 
 interface FeedCardProps {
     item: TContentComponent;
-    style?: Object;
+    style?: NonNullable<unknown>;
 }
 
 /**
- * The feed card component that renders the feed card with the post details 
+ * The feed card component that renders the feed card with the post details
  * and uses lazy loading for the images
- * @param props 
+ * @param props
  * @returns Feed card component
  */
 function FeedCard(props: FeedCardProps) {
@@ -54,7 +54,7 @@ function FeedCard(props: FeedCardProps) {
                 component="img"
                 image={item.postImage}
                 alt={strings.no_image}
-                loading='lazy'
+                loading="lazy"
             />
             <CardContent>
                 <div className="title">{item.title}</div>
