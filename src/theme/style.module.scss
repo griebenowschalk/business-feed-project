@@ -1,12 +1,12 @@
-@import "../scss/variables.scss";
+@use "../scss/variables.scss" as variables;
 
 :export {
-    text_dark: $text-dark;
-    primary: $color-primary;
-    secondary: $color-secondary;
-    error: $color-error;
-    warning: $color-warning;
-    tool_bar_height: $tool-bar-height;
-    nav_bar_width: $nav-bar-width;
-    container_background_color: $container-background-color;
+    text_dark: variables.$text-dark;
+    primary: variables.$color-primary;
+    secondary: variables.$color-secondary;
+    error: variables.$color-error;
+    warning: variables.$color-warning;
+    tool_bar_height: variables.$tool-bar-height;
+    nav_bar_width: variables.$nav-bar-width;
+    container_background_color: variables.$container-background-color;
 }

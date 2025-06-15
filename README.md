@@ -1,4 +1,4 @@
-# Schalk Griebenow - Wyzetalk Project
+# Business Feed Project
 
 Before running any other commands, ensure that all dependencies have been installed:
 
@@ -35,13 +35,13 @@ Docker local command-line instructions:
 Build image
 
 ```
-docker build -t wyzetalk-project .
+docker build -t business-feed-project .
 ```
 
 Run image
 
 ```
-docker run -it -p 4000:3000 wyzetalk-project
+docker run -it -p 4000:3000 business-feed-project
 ```
 
 ---
@@ -57,8 +57,8 @@ docker login
 Build image with hub username
 
 ```
-docker build -t <docker-hub-username>/wyzetalk-project .
-docker push <docker-hub-username>/wyzetalk-project:latest
+docker build -t <docker-hub-username>/business-feed-project .
+docker push <docker-hub-username>/business-feed-project:latest
 ```
 
 ---
@@ -80,5 +80,5 @@ kubectl apply -f deployment.yaml
 Assign Kubernetes cluster a static URL to access deployed application
 
 ```
-minikube service wyzetalk-project
+minikube service business-feed-project
 ```

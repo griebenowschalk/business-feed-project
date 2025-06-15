@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wyzetalk-project
+  name: business-feed-project
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: wyzetalk-project
+      app: business-feed-project
   template:
     metadata:
       labels:
-        app: wyzetalk-project
+        app: business-feed-project
     spec:
       containers:
-      - name: wyzetalk-project
-        image: schalkg/wyzetalk-project:latest #Latest image on Docker Hub
+      - name: business-feed-project
+        image: schalkg/business-feed-project:latest #Latest image on Docker Hub
         imagePullPolicy: Always
         resources:
           limits:
@@ -27,11 +27,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
- name: wyzetalk-project
+ name: business-feed-project
 spec:
   type: NodePort
   selector:
-    app: wyzetalk-project
+    app: business-feed-project
   ports:
     - port: 80
       protocol: TCP

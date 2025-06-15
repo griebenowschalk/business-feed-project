@@ -1,4 +1,4 @@
-@import "../../scss/variables.scss";
+@use "../../scss/variables.scss" as variables;
 
 .elastic-search-bar-root {
     max-width: 100%;
@@ -9,7 +9,7 @@
         flex-direction: row;
         align-items: center;
         border-width: 2px;
-        border-color: $color-secondary;
+        border-color: variables.$color-secondary;
         background: white;
     }
 
@@ -19,7 +19,7 @@
 
     .input {
         flex: 1;
-        width: calc(100% - $pm-double);
+        width: calc(100% - variables.$pm-double);
         margin: 0px 5px;
     }
 }

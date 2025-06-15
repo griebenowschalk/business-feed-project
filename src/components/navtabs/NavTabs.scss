@@ -1,8 +1,8 @@
-@import "../../scss/variables.scss";
+@use "../../scss/variables.scss" as variables;
 
 .tab-container {
     max-width: 100%;
-    margin-top: $pm-quarter;
+    margin-top: variables.$pm-quarter;
 
     .tabs {
         .button {
@@ -11,7 +11,7 @@
             height: auto;
             width: 100%;
             color: white;
-            background-color: $color-primary;
+            background-color: variables.$color-primary;
     
             &:hover {
                 // background-color: $color-secondary;
@@ -22,7 +22,7 @@
 
             &--selected {
                 @extend .button;
-                background-color: $color-secondary;
+                background-color: variables.$color-secondary;
             }
         }
     }

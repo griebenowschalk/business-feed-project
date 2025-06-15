@@ -1,5 +1,7 @@
-@import "../../scss/global.scss";
-@import "../../scss/scrollbar.scss";
+@use "../../scss/global.scss" as global;
+@use "../../scss/scrollbar.scss" as scrollbar;
+@use "../../scss/variables.scss" as variables;
+@use "../../scss/media.scss" as media;
 
 .home-container {
     display: flex;
@@ -15,12 +17,12 @@
     .content {
         position: relative;
         flex: 1;
-        margin-top: $pm-half;
-        margin-bottom: calc($tool-bar-height + $pm-half);
+        margin-top: variables.$pm-half;
+        margin-bottom: calc(variables.$tool-bar-height + variables.$pm-half);
 
         @extend .layout-scrollbar; 
 
-        @include sm {
+        @include media.sm {
             margin-bottom: 0px;
         }
 
@@ -31,7 +33,7 @@
             height: 100%;
             width: 100%;
             font-size: 20px;
-            color: $text-dark;
+            color: variables.$text-dark;
         }
     }
 }

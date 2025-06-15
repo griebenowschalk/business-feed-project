@@ -1,7 +1,7 @@
-@import "../../scss/variables.scss";
+@use "../../scss/variables.scss" as variables;
 
 .feed-card-container {
-    margin-bottom: $pm-half;
+    margin-bottom: variables.$pm-half;
 
     .avatar {
         height: 30px;
@@ -14,14 +14,14 @@
     }
 
     .title {
-        color: $text-dark;
+        color: variables.$text-dark;
         font-weight: 700;
         font-size: 15px;
-        margin-bottom: $pm-quarter;
+        margin-bottom: variables.$pm-quarter;
     }
 
     .description {
-        color: $color-secondary;
+        color: variables.$color-secondary;
         font-weight: 500;
         font-size: 15px;
     }

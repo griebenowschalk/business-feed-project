@@ -10,7 +10,7 @@ export const feedDemoConfig: TContentComponent[] = [
         type: 'post',
         author: 'Coy Maleport',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x800/`,
+        postImage: `https://picsum.photos/1200/800`,
         postTime: '2022-10-20 15:26:09',
         postDescription: loremIpsum()
             .toString()
@@ -38,7 +38,7 @@ export const feedDemoConfig: TContentComponent[] = [
         type: 'post',
         author: 'Issac Micco',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/800x600/`,
+        postImage: `https://picsum.photos/800/600`,
         postTime: '2022-09-03',
         postDescription: loremIpsum()
             .toString()
@@ -65,7 +65,7 @@ export const feedDemoConfig: TContentComponent[] = [
         type: 'post',
         author: 'Coy Maleport',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x400/`,
+        postImage: `https://picsum.photos/1200/400`,
         postTime: '2022-10-04',
         postDescription: loremIpsum()
             .toString()
@@ -80,7 +80,7 @@ export const feedDemoConfig: TContentComponent[] = [
         type: 'post',
         author: 'Teresita Blitzer',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x800/`,
+        postImage: `https://picsum.photos/1200/800`,
         postTime: '2022-09-04',
         postDescription: loremIpsum()
             .toString()
@@ -94,7 +94,7 @@ export const feedDemoConfig: TContentComponent[] = [
         type: 'post',
         author: 'Issac Micco',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x800/`,
+        postImage: `https://picsum.photos/1200/800`,
         postTime: '2022-09-03',
         postDescription: loremIpsum()
             .toString()
@@ -108,7 +108,7 @@ export const feedDemoConfig: TContentComponent[] = [
         type: 'post',
         author: 'Florine Stuver',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x400/`,
+        postImage: `https://picsum.photos/1200/400`,
         postTime: '2022-09-03',
         postDescription: loremIpsum()
             .toString()
@@ -121,7 +121,7 @@ export const feedDemoConfig: TContentComponent[] = [
         tag: 'hr',
         type: 'post',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x800/`,
+        postImage: `https://picsum.photos/1200/800`,
         postTime: '2022-10-04',
         postDescription: loremIpsum()
             .toString()
@@ -135,7 +135,7 @@ export const feedDemoConfig: TContentComponent[] = [
         tag: 'hr',
         type: 'post',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x800/`,
+        postImage: `https://picsum.photos/1200/800`,
         postTime: '2022-09-03',
         postDescription: loremIpsum()
             .toString()
@@ -148,7 +148,7 @@ export const feedDemoConfig: TContentComponent[] = [
         tag: 'business',
         type: 'post',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x800/`,
+        postImage: `https://picsum.photos/1200/800`,
         postTime: '2022-08-03',
         postDescription: loremIpsum()
             .toString()
@@ -162,7 +162,7 @@ export const feedDemoConfig: TContentComponent[] = [
         type: 'post',
         author: 'Florine Stuver',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x800/`,
+        postImage: `https://picsum.photos/1200/800`,
         postTime: '2022-09-03',
         postDescription: loremIpsum()
             .toString()
@@ -176,7 +176,7 @@ export const feedDemoConfig: TContentComponent[] = [
         type: 'post',
         author: 'Coy Maleport',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x800/`,
+        postImage: `https://picsum.photos/1200/800`,
         postTime: '2022-10-04',
         postDescription: loremIpsum()
             .toString()
@@ -191,7 +191,7 @@ export const feedDemoConfig: TContentComponent[] = [
         type: 'post',
         author: 'Teresita Blitzer',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x800/`,
+        postImage: `https://picsum.photos/1200/800`,
         postTime: '2022-09-04',
         postDescription: loremIpsum()
             .toString()
@@ -205,7 +205,7 @@ export const feedDemoConfig: TContentComponent[] = [
         type: 'post',
         author: 'Issac Micco',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x800/`,
+        postImage: `https://picsum.photos/1200/800`,
         postTime: '2022-09-03',
         postDescription: loremIpsum()
             .toString()
@@ -219,7 +219,7 @@ export const feedDemoConfig: TContentComponent[] = [
         type: 'post',
         author: 'Florine Stuver',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x800/`,
+        postImage: `https://picsum.photos/1200/800`,
         postTime: '2022-09-03',
         postDescription: loremIpsum()
             .toString()
@@ -233,7 +233,7 @@ export const feedDemoConfig: TContentComponent[] = [
         type: 'post',
         author: 'Coy Maleport',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x800/`,
+        postImage: `https://picsum.photos/1200/800`,
         postTime: '2022-10-04',
         postDescription: loremIpsum()
             .toString()
@@ -248,7 +248,7 @@ export const feedDemoConfig: TContentComponent[] = [
         type: 'post',
         author: 'Teresita Blitzer',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x800/`,
+        postImage: `https://picsum.photos/1200/800`,
         postTime: '2022-09-04',
         postDescription: loremIpsum()
             .toString()
@@ -262,7 +262,7 @@ export const feedDemoConfig: TContentComponent[] = [
         type: 'post',
         author: 'Issac Micco',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x800/`,
+        postImage: `https://picsum.photos/1200/800`,
         postTime: '2022-09-03',
         postDescription: loremIpsum()
             .toString()
@@ -276,7 +276,7 @@ export const feedDemoConfig: TContentComponent[] = [
         type: 'post',
         author: 'Florine Stuver',
         avatar: `https://api.dicebear.com/5.x/avataaars/svg?seed=${Math.random()}`,
-        postImage: `https://fakeimg.pl/1200x800/`,
+        postImage: `https://picsum.photos/1200/800`,
         postTime: '2022-09-03',
         postDescription: loremIpsum()
             .toString()

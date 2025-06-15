@@ -50,12 +50,14 @@ function FeedCard(props: FeedCardProps) {
                 title={item.author}
                 subheader={getTimeDifference(new Date(item.postTime))}
             />
-            <CardMedia
-                component="img"
-                image={item.postImage}
-                alt={strings.no_image}
-                loading="lazy"
-            />
+            {item.postImage && (
+                <CardMedia
+                    component="img"
+                    image={item.postImage}
+                    alt={strings.no_image}
+                    loading="lazy"
+                />
+            )}
             <CardContent>
                 <div className="title">{item.title}</div>
                 <div className="description">{item.postDescription}</div>

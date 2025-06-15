@@ -1,14 +1,15 @@
-@import "./variables.scss";
+@use "./variables.scss" as variables;
+@use "./media.scss" as media;
 
 .responsive-container-padding {
-    padding: 0px $pm-half;
+    padding: 0px variables.$pm-half;
 
-    @include lg {
-        padding: 0px $pm;
+    @include media.lg {
+        padding: 0px variables.$pm;
     }
 
-    @include sm {
-        padding-left: $pm-quarter;
+    @include media.sm {
+        padding-left: variables.$pm-quarter;
     }
 }
 
